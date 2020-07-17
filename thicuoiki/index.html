@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){
+            var seYear = $('#year');
+            var date = new Date();
+            var cur = date.getFullYear();
+            seYear.append('<option value="">-- Year --</option>');
+            for (i = cur; i >= 1900; i--) {
+                seYear.append('<option value="'+i+'">'+i+'</option>');
+            };
+            var seMonth = $('#month');
+            var date = new Date();
+            seMonth.append('<option value="">-- Month --</option>');
+            for (i = 12; i > 0; i--) {
+                seMonth.append('<option value="'+i+'">'+i+'</option>');
+            };
+            var seday=$('#day');
+            var date = new Date();
+            seday.append('<option value="">-- Day --</option>');
+            for (i=31; i>0; i--){
+                seday.append('<option value="'+i+'">'+i+'</option>');  
+            };
+           
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="signin">
+        <div id="logo">
+            <div id="rong"></div>
+            <div id="chim"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAMAAACcwCSMAAAAWlBMVEX///8AquwAp+sApesAo+v7/v8AoerV7fvp9v1tw/Hb8PvC5fn0+/7K6fqS0fSY1PWj2PZevvCs3PeByPM5te634Pctr+2HzPN8yfKZ0fVLtu9Pu/Di9PyQzfSJHipIAAAEnElEQVRoge1b2ZqqMAyWtOxrEQqK8/6veRBFWVpsQvHifP5XM4zTn6TN2ng6/fDDDz/8YIgkLS+X8/lS1NGXmf2sYozBAMZBFMG3mN266jmdCfpfRap5Tc1zIuqKzZhHfuGvPxu0zKZOAsHWzE/6zF18NnO4mD3Ztz2xo5B6BKuma99aYA6faT2A6w7uzNNT34X3Rq6grLz+NaGa/zuDkMzd6FT+Fj7uD6Rfds8TyWbnIJH9k/ww7l7WLJTOeCIXcqb3x6wkcRcb2z1hf38KZDJboH1ooyZwpwZyL95jYePP1yKwu1hqx1so+DbqhBVY8tZI6RPwF8XT+cevFbDsESdy90YXP37K36/PMhS5wAkOzqDzJA6l1z6XaCZLsNbdIFsKjjxtlX9yozyUHKAaacLp+7Nrskk4BXLHq6LpGB/MHV7hvltEQtN4F0ic4M4r5k6ce7cQwNTZ1Wgbf4JPzG11bJi4mZCHWDsbl28mi6y3DqSJr61o3NBOF2kUEvDuY4S/0bhncp9OpUp9wPMPRpeStM4XnsRXrwJy29eTztsqdrraBOy6ZXUFnhyc9YJXnQKBdbFW+Tle7ZXCipSbPtJXpYZedU63oXRf0ea/MMiUtQ9echar1vkQnYDLYs1fovdcTf7ZaqAPC/485NSWJDcJzH2yX4VlFLxOgMZC8eSGCwED2bVFGiSuiw9qDqjJEaH5Xv56/TuIM5ZbfdpPlDQU8GYOipJ1ADYlIkHbrsBbDh4KB/cMnmaFzx7IdZh2IXsYcIHNwrG4Khx1b0HhED/iY2WHTrHbcsgru6xOY7TposhVPYBH9npvYB3Krc6K0dUelVzl4DbCuV1ylZnjIwQNUlmIfYcbhIr7S5sOjZKcloFjwTUBlVj44ACa2ptcb2Kgcq53uNfjuTVb3iM+XnSur36otTaCXMt9So7m3uwspwcHc9gseY9Oo7arfULJa46P/fwjk7jP/bXNu5J9kJ8bm0F1kOrNWnuF6nrMAowaeyc3c+zzz1tvW0hKYXvvlQnUQujxULh+ZjWPNbk3S0LRNnnThsJyCs111ekUzfP+2bLSNcnbArdj/LtndpF/SGA1vSmNtq9kiTCdYDhAdH36tMQBOYW6TlHCeh6ry9aVMLmRRgB3L++GdtnNlX5Hgryj3ARK6YPs9tgpwxChJU8HBvnLGrWlmEobkApCvp+eNAcxwBd7gxt5/mSgb+Se6Lpj8maAmxZ9XkHj3zVz9EZC6VvQDvoKKUV0qHCeTQ03o2gdrjYG3nztTefh3ElDqh8AMfOhg5vTDI2p2upIqYnUy8kAAvyW6l6ANtn2wq3oyNTSpDjRwE38vANymcoE9agFftl0DqdnUQC4obK0kkKEoegq6Xmc7QpknkBbd+EwK6UhcyjROyAf7AnAyYi7He3NGwDCHRPlvtjRh9lHPUjfeLRjznhjYY7eLSp00gj8WlhJGu59oEYi1A9M2hD6jSRtryZ9OGDOtfFtZCtzuFEtnA3Tv/9FhnVkSd0K3OJcSOB8/H7E40sSjN9nZYr4K1+USKK4LC6Xv/P57++Sl3V6oLg//PDDD/8T/gFurj3sVHFX0AAAAABJRU5ErkJggg==" alt=""></div>
+            <div id="tieptheo">
+                <div id="next"><p>Next</p></div>
+            </div>
+        </div>
+        <div id="contain">
+            <div id="h"> <h2>Tạo tài khoản của bạn</h2></div>
+            <div id="ten">
+                <div id="ten1">
+                    <form>
+                        <label for="name">Tên</label><br>
+                         <input type="text" id="name" name="name" maxlength="50" ><br>
+                    </form>
+                </div>
+                <div id="ten2">
+                    <p>0/50</p>
+                </div>
+            </div>
+            <div id="dt">
+                <div id="dt1">
+                     <form>
+                        <label for="tele">Điện thoại</label><br>
+                        <input type="text" id="tele" name="tele" ><br>
+                    </form>
+                </div>
+            </div>
+            <div id="email"><a href="#"> Sử dụng email </a></div>
+            <div id="nsinh">
+                <p><strong> Ngày sinh</strong></p>
+            </div>
+            <div id="text">
+                <p>Điều này sẽ không được hiển thị công khai.  Xác nhận tuổi của bạn, ngay cả khi tài khoản này dành cho doanh nghiệp, thú cưng hoặc thứ gì khác.</p>
+            </div>
+            <div id="time">
+                <div id="time1">
+                    <form>
+                        
+                        <select name="month" id="month" size="1"></select>
+                        <select name="day" id="day" size="1"></select>
+                        <select name="year" id="year" size="1"></select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+</body>
+</html>
